@@ -29,9 +29,6 @@ public class ForgotPasswordController extends HttpServlet {
             // Đẩy email sang trang resetpassword.jsp thông qua request attribute
             req.setAttribute("email", email);
             req.getRequestDispatcher("/view/resetpassword.jsp").forward(req, resp);
-        } else {
-            req.setAttribute("error", "Email không tồn tại.");
-            req.getRequestDispatcher("/view/forgotpassword.jsp").forward(req, resp);
-        }
+        } 
     }
 }

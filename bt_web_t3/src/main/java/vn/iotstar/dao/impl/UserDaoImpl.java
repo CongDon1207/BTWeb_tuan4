@@ -109,7 +109,7 @@ public class UserDaoImpl extends DBConnectSQL implements IUserDao{
 	
 	@Override
     public boolean updatePassword(String email, String newPassword) {
-        String sql = "UPDATE users SET password = ? WHERE email = ?";
+        String sql = "UPDATE [User] SET password = ? WHERE email = ?";
         
         try {
         	conn = new DBConnectSQL().getConnection();
@@ -128,7 +128,7 @@ public class UserDaoImpl extends DBConnectSQL implements IUserDao{
 	@Override
 	public boolean checkExistEmail(String email) {
 	    boolean duplicate = false;
-	    String query = "SELECT * FROM [user] WHERE email = ?";
+	    String query = "SELECT * FROM [User] WHERE email = ?";
 
 	    try {
 	        // Kết nối cơ sở dữ liệu
@@ -259,7 +259,7 @@ public class UserDaoImpl extends DBConnectSQL implements IUserDao{
 	public static void main(String[] args) {
 		try {
 			IUserDao userDao = new UserDaoImpl();
-			userDao.updatePassword("donnc@gmail.com", "113");
+			userDao.updatePassword("donnc@gmail.com", "111");
 			System.out.print(userDao.findByUserName("donnc"));
 		}catch(Exception e) {
 			e.printStackTrace();

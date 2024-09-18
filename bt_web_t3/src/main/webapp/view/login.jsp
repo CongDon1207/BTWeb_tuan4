@@ -81,7 +81,7 @@
         </div>
         
         <div class="forgot-password">
-            <a href="/bt_web_t3/view/forgotpassword.jsp">Forgot Password?</a>
+            <a href="/bt_web_t3/forgotpassword">Forgot Password?</a>
         </div>
     </form>
 </div>
